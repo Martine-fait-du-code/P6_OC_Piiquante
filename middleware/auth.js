@@ -9,6 +9,7 @@ module.exports = (req, res, next) => {
       userId: userId,
     };
   } catch (error) {
+    console.log(error);
     res.status(401).json({ error });
   }
 };
