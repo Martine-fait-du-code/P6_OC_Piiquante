@@ -6,9 +6,6 @@ const sauceRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
 const path = require("path");
 const cors = require("cors");
-// const helmet = require("helmet");
-
-// app.use(helmet());
 
 app.use(cors());
 // cors();
@@ -30,7 +27,7 @@ app.use(cors());
 // similaire à bodyParser: transforme le corps de requête on objet javascript
 app.use(express.json());
 
-
+// Applicationn des routers
 app.use("/api/auth", userRoutes);
 app.use("/api/sauces", sauceRoutes);
 app.use("/images", express.static(path.join(__dirname, "images")));
